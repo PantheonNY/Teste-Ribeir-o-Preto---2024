@@ -1,0 +1,97 @@
+//l
+let INDICE = 13, SOMA = 0, K = 0;
+{
+    K = K + 1
+    SOMA = SOMA + K
+    console.log(SOMA)
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//2
+function pertenceSequenciaFibonacci(numero) {
+    let a = 0, b = 1;
+    while (b <= numero) {
+        if (b === numero) {
+            return true;
+        }
+        let temp = b;
+        b = a + b;
+        a = temp;
+    }
+    return false;
+
+}
+let numeroInformado = 21; // Número informado para verificação
+if (pertenceSequenciaFibonacci(numeroInformado)) {
+    console.log(`${numeroInformado} pertence à sequência de Fibonacci.`);
+} else {
+    console.log(`${numeroInformado} não pertence à sequência de Fibonacci.`)
+}//fim~
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+{// 3-)
+
+    //a
+    let a = 7;
+    let proximoElementoA = a + 2;
+    console.log(proximoElementoA);
+
+    //b
+    let b = 64;
+    let proximoElementoB = b * 2;
+    console.log(proximoElementoB);
+
+    //c
+    let c = 36;
+    let proximoElementoC = Math.pow(Math.sqrt(c) + 1, 2);
+    console.log(proximoElementoC);
+    //d
+    let d = 64;
+    let proximoElementoD = d + 20;
+    console.log(proximoElementoD);
+
+    //e
+    let e = 8;
+    let proximoElementoE = 8 + 5;
+    console.log(proximoElementoE);
+
+    //f
+    let f = 19;
+    let proximoElementoF = f + 1;
+    console.log(proximoElementoF);
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 4-)
+let lâmpada1 = false;
+let lâmpada2 = false;
+let lâmpada3 = false;
+
+lâmpada1 = !lâmpada1;
+
+lâmpada2 = !lâmpada2;
+
+
+if (lâmpada1) {
+    console.log("O interruptor 1 controla a lâmpada 1.");
+}
+
+if (lâmpada2 && !lâmpada1) {
+    console.log("O interruptor 2 controla a lâmpada 2.");
+}
+
+
+if (!lâmpada3) {
+    console.log("O interruptor 3 controla a lâmpada 3.");
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 5-)
+function inverterString(str) {
+    let resultado = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        resultado += str[i];
+    }
+    return resultado;
+}
+
+let minhaString = "Hello, world!";
+let stringInvertida = inverterString(minhaString);
+console.log(stringInvertida);
